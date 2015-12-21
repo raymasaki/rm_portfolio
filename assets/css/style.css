@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'TimesNR-Cond';
+    src: url('../fonts/TimesNR-Cond.eot');
+    src: url('../fonts/TimesNR-Cond.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/TimesNR-Cond.woff') format('woff'),
+         url('../fonts/TimesNR-Cond.woff2') format('woff2'),
+         url('../fonts/TimesNR-Cond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VenusSB';
+    src: url('../fonts/VenusSB-Bold.eot');
+    src: url('../fonts/VenusSB-Bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/VenusSB-Bold.woff') format('woff'),
+         url('../fonts/VenusSB-Bold.woff2') format('woff2'),
+         url('../fonts/VenusSB-Bold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'VenusSB';
+    src: url('../fonts/VenusSB-Medium.eot');
+    src: url('../fonts/VenusSB-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/VenusSB-Medium.woff') format('woff'),
+         url('../fonts/VenusSB-Medium.woff2') format('woff2'),
+         url('../fonts/VenusSB-Medium.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    background: #F7F9F8;
+
+    font-family: 'VenusSB', arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+strong {
+    font-weight: 900;
+}
