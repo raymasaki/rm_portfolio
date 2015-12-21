@@ -1,0 +1,24 @@
+{
+  "name": "rm_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raymasaki/rm_portfolio.git"
+  },
+  "author": "Ray Masaki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raymasaki/rm_portfolio/issues"
+  },
+  "homepage": "https://github.com/raymasaki/rm_portfolio",
+  "dependencies": {
+    "express": "^4.13.3",
+    "morgan": "^1.6.1"
+  }
+}
