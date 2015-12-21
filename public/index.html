@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="rmApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Ray Masaki</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="bower_components/angular/angular-csp.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="ng-cloak">
+
+    <nav>
+        <ul>
+            <li><a ui-sref="home">RM</a></li>
+            <li><a ui-sref="home">FEATURED WORK</a></li>
+            <li><a>INFO</a></li>
+        </ul>
+    </nav>
+
+    <div class="container" ng-controller="AppCtrl as app" ui-view></div>
+
+    <section class="menu">
+        <ul>
+            <li>
+                <strong>Google Primer</strong>
+                <span class="role">Web Design, Product Design, Illustration</span>
+            </li>
+            <li>
+                <strong>HYPEBEAST</strong>
+                <span class="role">Logo Design, Lettering</span>
+            </li>
+            <li>
+                <strong>Banger Gallery</strong>
+                <span class="role">Web Design, Web Development</span>
+            </li>
+            <li>
+                <strong>CS Indus.</strong>
+                <span class="role">Brand Identity, Web Design</span>
+            </li>
+            <li>
+                <strong>Insa</strong>
+                <span class="role">Brand Identity</span>
+            </li>
+            <li>
+                <strong>Quesofrito</strong>
+                <span class="role">Logo Design, Lettering</span>
+            </li>
+            <li>
+                <strong>Graphiti</strong>
+                <span class="role">Icon Design</span>
+            </li>
+            <li>
+                <strong>Illmat</strong>
+                <span class="role">Type Design</span>
+            </li>
+        </ul>
+    </section>
+
+
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/angular-ui-router.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
+
+   <script type="text/javascript">
+      WebFontConfig = { fontdeck: { id: '51465' } };
+
+      (function() {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+      })();
+   </script>
+
+</body>
+</html>
