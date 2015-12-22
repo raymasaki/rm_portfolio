@@ -110,6 +110,20 @@ nav .arrow {
    text-decoration: none;
 }
 
+.menu ul li.selected {
+   position: fixed;
+   width: 100%;
+   text-align: center;
+   z-index: 100;
+   color: #141212;
+   top: inherit;
+}
+
+.menu ul li.selected a {
+   color: #141212;
+}
+
+
 strong {
     font-weight: 900;
 }
@@ -141,8 +155,8 @@ strong {
    width: 100%;
    top: 100vh;
 
-   animation: slideUp 600ms cubic-bezier(.34,.34,.25,1);
-   animation-fill-mode: forwards;
+   /*animation: slideUp 500ms cubic-bezier(.34,.34,.25,1);
+   animation-fill-mode: forwards;*/
 }
 
 .project {
@@ -185,17 +199,6 @@ strong {
    padding-top: 24px;
 }
 
-.menu ul li.selected {
-   position: fixed;
-   width: 100%;
-   text-align: center;
-   z-index: 100;
-   color: #141212;
-}
-
-.menu ul li.selected a {
-   color: #141212;
-}
 
 /*======================== ANIMATION ========================*/
 
