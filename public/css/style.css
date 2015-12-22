@@ -1,3 +1,5 @@
+/*======================== FONTS ========================*/
+
 @font-face {
     font-family: 'TimesNR-Cond';
     src: url('../fonts/TimesNR-Cond.eot');
@@ -22,38 +24,18 @@
     font-style: normal;
 }
 
+/*======================== GLOBAL ========================*/
+
 body {
-    background: #F0EFED;
+    background: #141212;
     font-family: 'VenusSB', arial, sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
-    color: #1F1515;
+    color: #F7F7F5;
 }
 
-.menu {
-    text-align: center;
-    font-size: 1.4em;
-    line-height: 1.778em;
-    margin-top: 96px;
-    margin-bottom: 96px;
-}
-
-.menu ul li {
-    margin-bottom: 32px;
-}
-
-strong {
-    font-weight: 900;
-}
-
-.role {
-    font-family: 'TimesNR-Cond', serif;
-    display: block;
-    clear: both;
-    font-size: .9em;
-    line-height: 1em;
-}
+/*======================== NAV ========================*/
 
 nav {
    position: fixed;
@@ -66,7 +48,7 @@ nav {
 
    font-size: 14px;
    line-height: 56px;
-   background: #F0EFED;
+   background: #141212;
    height: 56px;
 }
 
@@ -79,7 +61,7 @@ nav ul li {
 }
 
 nav li a {
-   color: #1F1515;
+   color: #F7F7F5;
    text-decoration: none;
 }
 
@@ -96,4 +78,49 @@ nav ul li:nth-child(2) {
 nav ul li:last-child {
     text-align: right;
     padding-right: 24px;
+}
+
+nav .arrow {
+   display: block;
+   margin-top: -42px;
+}
+
+
+/*======================== MENU ========================*/
+
+.menu {
+    text-align: center;
+    font-size: 2em;
+    line-height: 1.778em;
+    margin-top: 96px;
+    margin-bottom: 96px;
+}
+
+.menu ul li {
+    margin-bottom: 48px;
+}
+
+.menu ul li a {
+   color: #F7F7F5;
+   text-decoration: none;
+}
+
+strong {
+    font-weight: 900;
+}
+
+.role {
+    /*font-family: 'TimesNR-Cond', serif;*/
+    font-family: 'VenusSB', serif;
+    display: block;
+    clear: both;
+    font-size: .7em;
+    line-height: .9em;
+}
+
+.num {
+   font-family: "Monosten E", Arial, monospace;
+   font-size: 14px;
+   line-height: 16px;
+   display: block;
 }
