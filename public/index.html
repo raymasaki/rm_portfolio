@@ -12,10 +12,10 @@
 
 <body class="ng-cloak">
 
-<nav>
+<nav ng-controller="MenuCtrl as menu">
    <ul>
       <li><a ui-sref="home">RM</a></li>
-      <li><a ui-sref="home">FEATURED WORK</a>
+      <li><a ui-sref="home" ng-click="menu.removeSelected()">FEATURED WORK</a>
          <span class="arrow">▾</span>
       </li>
       <li><a>INFO</a></li>
@@ -26,7 +26,7 @@
 
 <section class="menu" ng-controller="MenuCtrl as menu">
    <ul>
-      <li ng-repeat="project in menu.projects">
+      <li ng-repeat="project in menu.projects" class="{{ project.id }}">
          <span class="num">No {{ $index + 1 }}</span>
          <strong><a ui-sref="workDetail({ projectId: project.id })">{{ project.title }}</a></strong>
          <span class="role">{{ project.role }}</span>

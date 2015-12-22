@@ -30,7 +30,7 @@ body {
     background: #141212;
     font-family: 'VenusSB', arial, sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 19px;
     line-height: 24px;
     color: #F7F7F5;
 }
@@ -50,6 +50,9 @@ nav {
    line-height: 56px;
    background: #141212;
    height: 56px;
+   z-index: 50;
+
+   /*box-shadow: 0px 2px 15px 0px rgba(255, 255, 255, 0.75);*/
 }
 
 nav ul {
@@ -90,10 +93,12 @@ nav .arrow {
 
 .menu {
     text-align: center;
-    font-size: 2em;
+    font-size: 1.8em;
     line-height: 1.778em;
-    margin-top: 96px;
     margin-bottom: 96px;
+    position: absolute;
+    width: 100%;
+    top: 96px;
 }
 
 .menu ul li {
@@ -123,4 +128,82 @@ strong {
    font-size: 14px;
    line-height: 16px;
    display: block;
+}
+
+
+/*======================== CONTAINER ========================*/
+
+.container {
+   background: #FFF;
+   color: #141212;
+   z-index: 25;
+   position: absolute;
+   width: 100%;
+   top: 100vh;
+
+   animation: slideUp 600ms cubic-bezier(.34,.34,.25,1);
+   animation-fill-mode: forwards;
+}
+
+.project {
+   width: 90%;
+   margin: 0 auto;
+}
+
+.project-images {
+   display: flex;
+   flex-wrap: wrap;
+   width: 100%;
+   justify-content: space-between;
+}
+
+.project-images > * {
+   box-sizing: border-box;
+   padding: 8px;
+}
+
+.project-images .col-left, .col-right {
+   width: 50%;
+}
+
+.col-left > div:first-child {
+   margin-bottom: 16px;
+}
+
+.project-images .row {
+   width: 80%;
+}
+
+.desc {
+   width: 60%;
+   float: right;
+   box-sizing: border-box;
+   padding: 60px 0 120px;
+}
+
+.desc ul {
+   padding-top: 24px;
+}
+
+.menu ul li.selected {
+   position: fixed;
+   width: 100%;
+   text-align: center;
+   z-index: 100;
+   color: #141212;
+}
+
+.menu ul li.selected a {
+   color: #141212;
+}
+
+/*======================== ANIMATION ========================*/
+
+@keyframes slideUp {
+   0% {
+      top: 100vh;
+   }
+   100% {
+      top: 56px;
+   }
 }

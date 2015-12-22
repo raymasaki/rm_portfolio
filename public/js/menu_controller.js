@@ -15,4 +15,7 @@ function MenuCtrl($log) {
       { title : 'Illmat', id : 'illmat', role : 'Typeface' }
    ];
 
+   self.removeSelected = function() {
+      angular.element('.selected').removeClass('selected');
+   };
 }
