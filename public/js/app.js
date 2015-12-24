@@ -29,6 +29,11 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                 document.body.scrollTop = 0;
 
+                angular.element('.selected').removeClass('selected');
+
+                var projectClass = '.' + $stateParams.projectId;
+                angular.element(projectClass).addClass('selected');
+
                 window.setTimeout(function() {
 
                     degArr = [-1.5, -1, -0.5, 0, 0.5, 1, 1.5];
@@ -50,12 +55,10 @@ function MainRouter($stateProvider, $urlRouterProvider) {
                     angular.element('.container').css('margin-bottom', '100vh');
                 }, 300);
 
-                var projectClass = '.' + $stateParams.projectId;
-                angular.element(projectClass).addClass('selected');
-
                 $(window).scroll(function() {
                     if ($(window).scrollTop() + $(window).height() == $(document).height()) {
                         $state.go('home');
+                        angular.element('.selected').removeClass('selected');
                     }
                 });
 

@@ -7,7 +7,7 @@ function MenuCtrl($log, $state, currAngle) {
 
    self.projects = [
       { title : 'Google Primer', id : 'primer', role : 'Mobile App, Website' },
-      { title : 'Banger.Gallery', id : 'banger', role : 'Website' },
+      { title : 'Banger Gallery', id : 'banger', role : 'Website' },
       { title : 'HYPEBEAST', id : 'hypebeast', role : 'Logo' },
       { title : 'CS Industries', id : 'csindus', role : 'Brand Identity, Website' },
       { title : 'Insa Brooklyn', id : 'insa', role : 'Restaurant Identity' },

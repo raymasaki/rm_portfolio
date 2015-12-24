@@ -21,7 +21,7 @@
    </p>
 
    <section class="menu" ng-controller="MenuCtrl as menu">
-      <h1>Select Work:</h1>
+      <h2>Select Work:</h2>
       <ul>
          <li ng-repeat="project in menu.projects" class="{{ project.id }}">
             <a ng-click="menu.showProject(project.id)">{{ project.title }}</a>
@@ -29,7 +29,7 @@
       </ul>
    </section>
 
-   <h1>Contact</h1>
+   <h2>Contact</h2>
    <ul>
       <li>+1 609 610 4325</li>
       <li><a href="mailto:ray@raymasaki.com" target="_blank">ray@raymasaki.com</a></li>
