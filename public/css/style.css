@@ -27,121 +27,46 @@
 /*======================== GLOBAL ========================*/
 
 body {
-    background: #141212;
-    font-family: 'VenusSB', arial, sans-serif;
+    background: #F7F7F5;
+    font-family: "Monosten E", Arial, monospace;
     font-weight: 400;
-    font-size: 19px;
+    font-size: 13px;
     line-height: 24px;
-    color: #F7F7F5;
+    color: #141212;
 }
 
-/*======================== NAV ========================*/
-
-nav {
-   position: fixed;
-   top: 0;
-   width: 100%;
-   font-family: "Monosten E", Arial, monospace;
-   font-size-adjust:0.5;
-   font-weight:200;
-   font-style:normal;
-
-   font-size: 14px;
-   line-height: 56px;
-   background: #141212;
-   height: 56px;
-   z-index: 50;
-
-   /*box-shadow: 0px 2px 15px 0px rgba(255, 255, 255, 0.75);*/
-}
-
-nav ul {
-    display: flex;
-}
-
-nav ul li {
-    width: 25%;
-}
-
-nav li a {
-   color: #F7F7F5;
-   text-decoration: none;
-}
-
-nav ul li:first-child {
-    text-align: left;
-    padding-left: 24px;
-}
-
-nav ul li:nth-child(2) {
-    text-align: center;
-    width: 50%;
-}
-
-nav ul li:last-child {
-    text-align: right;
-    padding-right: 24px;
-}
-
-nav .arrow {
-   display: block;
-   margin-top: -42px;
-}
-
-
-/*======================== MENU ========================*/
-
-.menu {
-    text-align: center;
-    font-size: 1.8em;
-    line-height: 1.778em;
-    margin-bottom: 96px;
-    position: absolute;
-    width: 100%;
-    top: 96px;
-}
-
-.menu ul li {
-    margin-bottom: 48px;
-}
-
-.menu ul li a {
-   color: #F7F7F5;
-   text-decoration: none;
-}
-
-.menu ul li.selected {
-   position: fixed;
-   width: 100%;
-   text-align: center;
-   z-index: 100;
-   color: #141212;
-   top: inherit;
-}
-
-.menu ul li.selected a {
-   color: #141212;
-}
-
-
-strong {
-    font-weight: 900;
-}
-
-.role {
-    /*font-family: 'TimesNR-Cond', serif;*/
-    font-family: 'VenusSB', serif;
-    display: block;
-    clear: both;
-    font-size: .7em;
-    line-height: .9em;
-}
-
-.num {
-   font-family: "Monosten E", Arial, monospace;
+h1 {
+   font-family: 'VenusSB', Arial, sans-serif;
+   font-weight: 900;
+   padding-bottom: 16px;
    font-size: 14px;
    line-height: 16px;
-   display: block;
+   letter-spacing: .5px;
+}
+
+a {
+   text-decoration: none;
+   color: #141212;
+}
+
+ul {
+   padding-bottom: 16px;
+}
+
+/*======================== MAIN ========================*/
+
+.main {
+   padding: 32px;
+   position: fixed;
+}
+
+.menu {
+   margin-bottom: 16px;
+}
+
+p.about {
+   max-width: 464px;
+   margin-bottom: 32px;
 }
 
 
@@ -152,11 +77,10 @@ strong {
    color: #141212;
    z-index: 25;
    position: absolute;
-   width: 100%;
+   max-width: 80%;
    top: 100vh;
-
-   /*animation: slideUp 500ms cubic-bezier(.34,.34,.25,1);
-   animation-fill-mode: forwards;*/
+   right: 5%;
+   box-shadow: 0px 8px 24px 0px rgba(0,0,0,0.25);
 }
 
 .project {

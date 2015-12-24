@@ -4,6 +4,4 @@ function AppCtrl($log, $http, $filter, $timeout) {
 
     var self = this;
 
-    self.currID = null;
-
 }
