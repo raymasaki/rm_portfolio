@@ -14,13 +14,30 @@
 
 <div class="container" ng-controller="AppCtrl as app" ui-view></div>
 
-<div class="main">
+<div class="main" ng-controller="MenuCtrl as menu">
 
    <p class="about">
       Ray Masaki is a designer and frontend web developer based in New York City. He is a graduate of Parsons School of Design, and the postgraduate type design program at The Cooper Union.
+      <span class="bomb" ng-click="menu.showProject('bomb')">
+         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 200 213.2" enable-background="new 0 0 200 213.2" xml:space="preserve">
+        <g>
+          <path fill="#FFFFFF" d="M0,130c0-45.8,37.6-83.1,83.1-83.1c8,0,15.9,1.1,23.3,3.3l10.4-18.1c1.1-1.9,11,1.9,22.8,8.5
+  		c4.4-4.9,13.4-12.9,26.6-15.9v-0.3c1.6-8.2,4.9-15.4,12.3-19.5c-0.8,4.4,2.5,6.6,5.5,6.6c4.4,0,7.1-3,7.1-11.5
+  		c8.8,12.1,4.4,21.9-2.5,23c3.6,1.4,7.1,1.1,11.2-1.1c-3.3,7.4-8.2,12.6-16.2,12.6c-6,0-12.1-2.5-14.8-4.7
+  		c-12.1,2.2-20,8.8-24.7,13.4c11.8,7.1,20,13.4,18.9,15.4l-12.9,22.5c9.9,13.7,15.9,30.5,15.9,48.8c0,45.5-37.3,83.1-83.1,83.1
+  		C37.6,213.2,0,175.6,0,130z M32.9,118.5c-1.4-0.8-3.6,0-4.1,1.4c-10.4,18.1-3.6,39.8,15.9,51c20,11.5,42,6.3,52.4-11.8
+  		c0.5-1.4,0-3.3-1.1-4.1c-1.4-0.8-3.6-0.3-4.1,1.1c-9.1,15.1-27.7,18.7-44.2,9.3c-16.2-9.3-22.8-26.9-13.4-42.5
+  		C34.8,121.5,34.6,119.3,32.9,118.5z M60.9,94.4c4.7-7.7,5.5-15.9,1.6-18.1c-3.8-2.2-10.7,2.5-15.1,10.4c-4.7,7.7-5.2,16.2-1.4,18.4
+  		C49.7,107.3,56.5,102.3,60.9,94.4z M118,127.3c4.7-7.7,5.5-15.9,1.6-18.1s-10.7,2.5-15.1,10.4c-4.7,7.7-5.5,16.2-1.6,18.4
+  		S113.6,135.3,118,127.3z M156.9,57.6c0.8-1.6-6-6.3-14.8-11.5c-1.1,1.4-1.6,2.2-1.6,2.2c-0.5,0.5-1.6,0.3-3-0.5
+  		c-1.4-0.8-1.9-1.6-1.4-2.5c0,0,0.5-0.5,1.4-1.6c-8.5-4.7-15.4-7.7-16.2-6.6c-0.8,1.6,6.3,7.7,15.6,13.2
+  		C146.5,55.7,155.8,59.5,156.9,57.6z" />
+        </g>
+      </svg>
+      </span>
    </p>
 
-   <section class="menu" ng-controller="MenuCtrl as menu">
+   <section class="menu">
       <h2>Select Work:</h2>
       <ul>
          <li ng-repeat="project in menu.projects" class="{{ project.id }}">
