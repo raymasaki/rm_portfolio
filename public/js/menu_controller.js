@@ -1,8 +1,9 @@
-app.controller('MenuCtrl', ['$log', MenuCtrl]);
+app.controller('MenuCtrl', ['$log', '$state', 'currAngle', MenuCtrl]);
 
-function MenuCtrl($log) {
+function MenuCtrl($log, $state, currAngle) {
 
    var self = this;
+   self.currProject = null;
 
    self.projects = [
       { title : 'Google Primer', id : 'primer', role : 'Mobile App, Website' },
@@ -15,7 +16,22 @@ function MenuCtrl($log) {
       { title : 'Illmat', id : 'illmat', role : 'Typeface' }
    ];
 
-   self.removeSelected = function() {
-      angular.element('.selected').removeClass('selected');
+   self.showProject = function(id) {
+      self.currProject = id;
+
+      var angle = currAngle.getProperty() + 'deg';
+
+      if (self.currProject !== null) {
+         angular.element('.container').velocity({
+            translateY: -($(document).height()),
+            rotateZ: [0, angle]
+         },{
+            duration: '800ms'
+         });
+
+         window.setTimeout(function() {
+            $state.go('workDetail', { projectId: id });
+         }, 600);
+      }
    };
 }

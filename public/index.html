@@ -24,7 +24,7 @@
       <h1>Select Work:</h1>
       <ul>
          <li ng-repeat="project in menu.projects" class="{{ project.id }}">
-            <strong><a ui-sref="workDetail({ projectId: project.id })">{{ project.title }}</a></strong>
+            <a ng-click="menu.showProject(project.id)">{{ project.title }}</a>
          </li>
       </ul>
    </section>
