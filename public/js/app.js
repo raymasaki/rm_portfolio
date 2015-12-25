@@ -52,7 +52,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
                         easing: [0.37, 0.35, 0.12, 1]
                     });
 
-                    angular.element('.container').css('margin-bottom', '100vh');
+                    angular.element('.container').css('margin-bottom', '102vh');
                 }, 300);
 
                 $(window).scroll(function() {
