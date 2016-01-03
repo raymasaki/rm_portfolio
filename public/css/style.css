@@ -144,6 +144,10 @@ p.about:hover {
    box-sizing: border-box;
 }
 
+.visible {
+   margin-bottom: 104vh !important;
+}
+
 .project {
    margin: 0 auto;
    padding: 24px 32px 0px;
@@ -204,6 +208,8 @@ p.about:hover {
 
 .left-50 {
    width: 50%;
+   box-sizing: border-box;
+   padding-right: 8px;
 }
 
 .left-60 {
@@ -212,12 +218,20 @@ p.about:hover {
    box-sizing: border-box;
 }
 
+.left-30 {
+   width: 30%;
+   box-sizing: border-box;
+   padding-right: 12px;
+}
+
 .right-40 {
    width: 40%;
 }
 
 .right-50 {
    width: 50%;
+   box-sizing: border-box;
+   padding-left: 8px;
 }
 
 .right-60 {
@@ -296,6 +310,11 @@ p.about:hover {
       width: 100%;
    }
 
+   .clear {
+      clear: both;
+      display: block;
+   }
+
    .project-images .row {
       width: 100%;
       padding: 0;
@@ -329,6 +348,10 @@ p.about:hover {
       padding: 0px;
    }
 
+   .left-30 {
+      width: 100%;
+   }
+
    .left-50 {
       width: 100%;
    }
@@ -336,6 +359,7 @@ p.about:hover {
    .left-60 {
       width: 100%;
       padding: 0px;
+      margin-bottom: 4px;
    }
 
    .right-40 {

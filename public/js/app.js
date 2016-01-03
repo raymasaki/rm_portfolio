@@ -36,6 +36,8 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                 window.setTimeout(function() {
 
+                   angular.element('.container').addClass('visible');
+
                     degArr = [-1.5, -1, -0.5, 0, 0.5, 1, 1.5];
                     var degree = degArr[Math.floor(Math.random() * 7)];
 
@@ -52,7 +54,6 @@ function MainRouter($stateProvider, $urlRouterProvider) {
                         easing: [0.37, 0.35, 0.12, 1]
                     });
 
-                    angular.element('.container').css('margin-bottom', '102vh');
                 }, 300);
 
                 $(window).scroll(function() {
