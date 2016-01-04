@@ -128,6 +128,41 @@ p.about:hover {
    width: 48px;
 }
 
+img {
+  opacity: 0;
+  transition: all 300ms;
+  z-index: 10;
+}
+
+img.loaded {
+  transition-delay: 1s;
+  opacity: 1;
+}
+
+.loading {
+   color: red;
+   position: absolute;
+   left: 16px;
+   top: 16px;
+   z-index: 0;
+}
+
+.iris {
+   width: 16px;
+   height: 16px;
+   transform: rotateZ(0deg);
+   animation: loop 750ms infinite linear;
+   position: absolute;
+   top: 4px;
+   left: 8px;
+}
+
+.eye {
+   width: 32px;
+   height: 24px;
+   float: left;
+}
+
 
 /*======================== CONTAINER ========================*/
 
@@ -162,6 +197,7 @@ p.about:hover {
 
 .project-images img {
    width: 100%;
+   position: relative;
 }
 
 .project-images > * {
@@ -171,6 +207,10 @@ p.about:hover {
 
 .col-left > div:first-child {
    margin-bottom: 16px;
+}
+
+.row, .row-60, .row-80, .left-40, .left-50, .left-70, .left-60, .left-30, .right-40, .right-30, .right-50, .right-60 {
+   position: relative;
 }
 
 .project-images .row {
@@ -218,10 +258,20 @@ p.about:hover {
    box-sizing: border-box;
 }
 
+.left-70 {
+   width: 70%;
+   padding-right: 12px;
+   box-sizing: border-box;
+}
+
 .left-30 {
    width: 30%;
    box-sizing: border-box;
    padding-right: 12px;
+}
+
+.right-30 {
+   width: 30%;
 }
 
 .right-40 {
@@ -362,6 +412,16 @@ p.about:hover {
       margin-bottom: 4px;
    }
 
+   .left-70 {
+      width: 100%;
+      padding: 0px;
+      margin-bottom: 4px;
+   }
+
+   .right-30 {
+      width: 100%;
+   }
+
    .right-40 {
       width: 100%;
    }
@@ -390,5 +450,14 @@ p.about:hover {
    }
    100% {
       opacity: 1;
+   }
+}
+
+@keyframes loop {
+   0% {
+      transform: rotateZ(0deg);
+   }
+   100% {
+      transform: rotateZ(360deg);
    }
 }

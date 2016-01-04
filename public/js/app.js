@@ -1,6 +1,19 @@
 var app = angular.module('rmApp', ['ui.router'])
     .config(MainRouter);
 
+app.directive('imgFadeInOnload', function () {
+    return {
+      restrict: 'A',
+      link: function postLink(scope, element, attr) {
+        // once the image is loaded add the class 'loaded'
+        element.bind("load", function () {
+          element.addClass('loaded');
+        });
+        element.attr('src', attr.imgFadeInOnload);
+      }
+    };
+  });
+
 app.service('currAngle', function() {
     var angle = 0;
 
