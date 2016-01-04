@@ -51,8 +51,8 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                    angular.element('.container').addClass('visible');
 
-                    degArr = [-1.5, -1, -0.5, 0, 0.5, 1, 1.5];
-                    var degree = degArr[Math.floor(Math.random() * 7)];
+                    degArr = [-1.5, -1.25, -1, -0.75, 0, 0.75, 1, 1.25, 1.5];
+                    var degree = degArr[Math.floor(Math.random() * degArr.length)];
 
                     currAngle.setProperty(degree);
 
