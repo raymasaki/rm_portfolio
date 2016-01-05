@@ -170,28 +170,29 @@ img.loaded {
 
 /*======================== CONTAINER ========================*/
 
-.container {
-   background: #FFF;
-   color: #141212;
-   z-index: 25;
-   position: absolute;
-   width: 80%;
-   max-width: 1200px;
-   transform: translateY(100vh) rotateZ(0deg);
-   /*top: 100vh;*/
-   right: 5%;
-   box-shadow: 0px 8px 32px 0px rgba(0,0,0,1);
-   box-sizing: border-box;
-   margin-bottom: 0;
-}
-
-.visible {
-   margin-bottom: 104vh !important;
-}
 
 .project {
-   margin: 0 auto;
+   color: #141212;
+   z-index: 100;
+   position: relative;
+   width: 80%;
+   max-width: 1200px;
+   float: right;
+   margin-right: 5%;
+
+   background: #FFF;
+   transform: translateY(100vh) rotateZ(0deg);
+   box-shadow: 0px 8px 32px 0px rgba(0,0,0,1);
+   box-sizing: border-box;
    padding: 24px 32px 0px;
+}
+
+.spacer {
+   clear: both;
+   float: right;
+   width: 1px;
+   margin-bottom: 124vh;
+   pointer-events: none;
 }
 
 .project-images {
@@ -206,6 +207,10 @@ img.loaded {
    width: 100%;
    position: relative;
    background: #ECECEC;
+}
+
+.project-images a img {
+   cursor: ne-resize;
 }
 
 .project-images > * {
@@ -315,7 +320,7 @@ img.loaded {
    letter-spacing: .6px;
 
    width: 60%;
-   float: right;
+   margin-left: 40%;
    box-sizing: border-box;
    padding: 48px 16px 90px 8px;
 }
@@ -341,21 +346,19 @@ img.loaded {
 /*======================== MEDIA QUERIES ========================*/
 
 
-@media (min-width: 1200px) { /* everything above 1200 */
-
-}
 @media (max-width: 768px) { /* everything below 767 */
+
+   .main {
+      padding: 16px;
+   }
 
    h1 {
       font-size: 24px;
    }
 
-   .container {
-      width: 94%;
-      left: 3%;
-   }
-
    .project {
+      width: 94%;
+      margin: 0 auto;
       padding: 8px 16px;
    }
 
@@ -366,6 +369,7 @@ img.loaded {
 
    .desc {
       width: 100%;
+      margin: 0;
    }
 
    .clear {
@@ -443,12 +447,7 @@ img.loaded {
    }
 
 }
-@media (min-width: 769px) and (max-width: 991px) { /* between 768 and 991 */
 
-}
-@media (min-width: 992px) and (max-width: 1199px) { /* between 992 and 1199 */
-
-}
 
 /*======================== ANIMATION ========================*/
 

@@ -19,16 +19,21 @@ function MenuCtrl($log, $state, currAngle) {
    self.showProject = function(id) {
       self.currProject = id;
 
+      // gets the current angle of the sheet
       var angle = currAngle.getProperty();
 
+      // if a current project exists
       if (self.currProject !== null) {
-         angular.element('.container').velocity({
+
+         // current sheet transitions off page with proper angle
+         angular.element('.project').velocity({
             translateY: -($(document).height()),
             rotateZ: [angle, angle]
          },{
             duration: '800ms'
          });
 
+         // open the clicked project
          window.setTimeout(function() {
             $state.go('workDetail', { projectId: id });
          }, 600);

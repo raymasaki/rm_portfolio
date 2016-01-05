@@ -5,6 +5,7 @@ app.directive('imgFadeInOnload', function () {
     return {
       restrict: 'A',
       link: function postLink(scope, element, attr) {
+         
         // once the image is loaded add the class 'loaded'
         element.bind("load", function () {
           element.addClass('loaded');
@@ -14,6 +15,7 @@ app.directive('imgFadeInOnload', function () {
     };
   });
 
+// Makes the current sheet angle accessible across controllers
 app.service('currAngle', function() {
     var angle = 0;
 
@@ -40,31 +42,34 @@ function MainRouter($stateProvider, $urlRouterProvider) {
             },
             controller: function($stateParams, $state, currAngle) {
 
+               // resets the scrollTop every project
                 document.body.scrollTop = 0;
 
                 angular.element('.selected').removeClass('selected');
 
+                // finds the current project and gives it selected class
                 var projectClass = '.' + $stateParams.projectId;
                 angular.element(projectClass).addClass('selected');
 
                 window.setTimeout(function() {
 
-                  //  angular.element('.container').addClass('visible');
-
+                   // sheet angle randomizer
                     degArr = [-1.5, -1.25, -1, -0.75, 0, 0.75, 1, 1.25, 1.5];
                     var degree = degArr[Math.floor(Math.random() * degArr.length)];
+
+                    // if user is coming from mobile, don't give sheet angle
+                    if ($(document).width() < 768) {
+                       degree = 0;
+                    }
+
                     degree = degree + 'deg';
 
                     currAngle.setProperty(degree);
 
-                  //   angular.element('.container').css({
-                  //       WebkitTransform: 'rotate(' + degree + 'deg)'
-                  //   });
-
-                    angular.element('.container').velocity({
+                    // sheet transitions in
+                    angular.element('.project').velocity({
                        rotateZ: [degree, '0deg'],
-                        translateY: ['10vh', '100vh'],
-                        marginBottom: ['104vh', 0]
+                        translateY: ['10vh', '100vh']
                     }, {
                         duration: 600,
                         easing: [0.37, 0.35, 0.12, 1]
@@ -72,6 +77,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                 }, 300);
 
+                // if user scrolls past the document height remove selected state
                 $(window).scroll(function() {
                     if ($(window).scrollTop() + $(window).height() == $(document).height()) {
                         $state.go('home');
