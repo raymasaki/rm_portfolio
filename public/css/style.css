@@ -18,6 +18,10 @@
 
 /*======================== GLOBAL ========================*/
 
+html {
+  overflow-y: scroll;
+}
+
 body {
     color: #ECEFF1;
     font-family: "Monosten E", Arial, monospace;
@@ -193,11 +197,13 @@ img.loaded {
    flex-wrap: wrap;
    width: 100%;
    justify-content: space-between;
+   min-height: 544px;
 }
 
 .project-images img {
    width: 100%;
    position: relative;
+   background: #ECECEC;
 }
 
 .project-images > * {
