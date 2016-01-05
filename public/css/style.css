@@ -177,10 +177,12 @@ img.loaded {
    position: absolute;
    width: 80%;
    max-width: 1200px;
-   top: 100vh;
+   transform: translateY(100vh) rotateZ(0deg);
+   /*top: 100vh;*/
    right: 5%;
    box-shadow: 0px 8px 32px 0px rgba(0,0,0,1);
    box-sizing: border-box;
+   margin-bottom: 0;
 }
 
 .visible {

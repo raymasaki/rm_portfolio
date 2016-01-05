@@ -19,12 +19,12 @@ function MenuCtrl($log, $state, currAngle) {
    self.showProject = function(id) {
       self.currProject = id;
 
-      var angle = currAngle.getProperty() + 'deg';
+      var angle = currAngle.getProperty();
 
       if (self.currProject !== null) {
          angular.element('.container').velocity({
             translateY: -($(document).height()),
-            rotateZ: [0, angle]
+            rotateZ: [angle, angle]
          },{
             duration: '800ms'
          });

@@ -49,19 +49,22 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                 window.setTimeout(function() {
 
-                   angular.element('.container').addClass('visible');
+                  //  angular.element('.container').addClass('visible');
 
                     degArr = [-1.5, -1.25, -1, -0.75, 0, 0.75, 1, 1.25, 1.5];
                     var degree = degArr[Math.floor(Math.random() * degArr.length)];
+                    degree = degree + 'deg';
 
                     currAngle.setProperty(degree);
 
-                    angular.element('.container').css({
-                        WebkitTransform: 'rotate(' + degree + 'deg)'
-                    });
+                  //   angular.element('.container').css({
+                  //       WebkitTransform: 'rotate(' + degree + 'deg)'
+                  //   });
 
                     angular.element('.container').velocity({
-                        top: '10%',
+                       rotateZ: [degree, '0deg'],
+                        translateY: ['10vh', '100vh'],
+                        marginBottom: ['104vh', 0]
                     }, {
                         duration: 600,
                         easing: [0.37, 0.35, 0.12, 1]
