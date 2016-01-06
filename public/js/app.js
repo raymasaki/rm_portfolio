@@ -5,7 +5,7 @@ app.directive('imgFadeInOnload', function () {
     return {
       restrict: 'A',
       link: function postLink(scope, element, attr) {
-         
+
         // once the image is loaded add the class 'loaded'
         element.bind("load", function () {
           element.addClass('loaded');
@@ -68,7 +68,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                     // sheet transitions in
                     angular.element('.project').velocity({
-                       rotateZ: [degree, '0deg'],
+                        rotateZ: [degree, degree],
                         translateY: ['10vh', '100vh']
                     }, {
                         duration: 600,

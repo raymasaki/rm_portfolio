@@ -206,7 +206,7 @@ img.loaded {
 .project-images img {
    width: 100%;
    position: relative;
-   background: #ECECEC;
+   background: #FFF;
 }
 
 .project-images a img {
@@ -301,6 +301,14 @@ img.loaded {
    width: 60%;
 }
 
+.attr {
+   font-family: Arial, sans-serif;
+   font-size: 12px;
+   -webkit-font-smoothing: antialiased;
+   letter-spacing: .6px;
+   padding: 4px 0;
+}
+
 .role {
    font-family: Arial, sans-serif;
    font-size: 17px;
@@ -358,7 +366,7 @@ img.loaded {
 
    .project {
       width: 94%;
-      margin: 0 auto;
+      margin: 0 3%;
       padding: 8px 16px;
    }
 

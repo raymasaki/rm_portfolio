@@ -12,6 +12,7 @@ function MenuCtrl($log, $state, currAngle) {
       { title : 'CS Industries', id : 'csindus', role : 'Brand Identity, Website' },
       { title : 'Insa Brooklyn', id : 'insa', role : 'Restaurant Identity' },
       { title : 'Quesofrito', id : 'quesofrito', role : 'Logo, Lettering' },
+      // { title : 'MONEYSHOWER.BIZ', id : 'moneyshower', role : 'Website' },
       { title : 'Graphiti', id : 'graphiti', role : 'Icon Suite' }
       // { title : 'Illmat', id : 'illmat', role : 'Typeface' }
    ];
@@ -30,7 +31,7 @@ function MenuCtrl($log, $state, currAngle) {
             translateY: -($(document).height()),
             rotateZ: [angle, angle]
          },{
-            duration: '800ms'
+            duration: '850ms'
          });
 
          // open the clicked project
