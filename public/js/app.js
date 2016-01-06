@@ -15,6 +15,13 @@ app.directive('imgFadeInOnload', function () {
     };
   });
 
+app.directive('rmPreloader', function() {
+   return {
+      restrict: 'E',
+      templateUrl: 'preloader.html'
+   };
+});
+
 // Makes the current sheet angle accessible across controllers
 app.service('currAngle', function() {
     var angle = 0;
