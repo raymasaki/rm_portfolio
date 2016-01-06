@@ -86,9 +86,15 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                 // if user scrolls past the document height remove selected state
                 $(window).scroll(function() {
+                  //  angular.element('.main').css('position', 'fixed');
+
                     if ($(window).scrollTop() + $(window).height() == $(document).height()) {
                         $state.go('home');
                         angular.element('.selected').removeClass('selected');
+
+                        // if ($(window).height() < 600) {
+                        //    angular.element('.main').css('position', 'absolute');
+                        // }
                     }
                 });
 
