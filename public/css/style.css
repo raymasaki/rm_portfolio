@@ -30,6 +30,8 @@ body {
     line-height: 24px;
     background: #000;
     font-kerning: normal;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 h1 {
