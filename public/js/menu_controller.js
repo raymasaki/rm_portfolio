@@ -40,4 +40,25 @@ function MenuCtrl($log, $state, currAngle) {
          }, 600);
       }
    };
+
+   self.explosion = function() {
+      self.currProject = null;
+
+      var angle = currAngle.getProperty();
+
+      // current sheet transitions off page with proper angle
+      angular.element('.project').velocity({
+         translateY: -($(document).height()),
+         rotateZ: [angle, angle]
+      },{
+         duration: '850ms'
+      });
+
+      // state changes to home
+      window.setTimeout(function() {
+         $state.go('home');
+         angular.element('.selected').removeClass('selected');
+      }, 600);
+
+   };
 }

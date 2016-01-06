@@ -244,11 +244,11 @@ img.loaded {
 }
 
 .row-60 > img:first-child {
-   padding-right: 6px;
+   padding-right: 8px;
 }
 
-.row-60 > img:last-child {
-   padding-left: 6px;
+.row-60 > img:nth-child(2n) {
+   padding-left: 8px;
 }
 
 .row-80 {
