@@ -2,9 +2,9 @@ app.controller('AppCtrl', ['$log', '$state', '$http', '$filter', '$timeout', 'cu
 
 function AppCtrl($log, $state, $http, $filter, $timeout, currAngle) {
 
-    var self = this;
+   var self = this;
 
-    self.closeProject = function() {
+   self.closeProject = function() {
 
       self.currProject = null;
 
@@ -14,7 +14,7 @@ function AppCtrl($log, $state, $http, $filter, $timeout, currAngle) {
       angular.element('.project').velocity({
          translateY: -($(document).height()),
          rotateZ: [angle, angle]
-      },{
+      }, {
          duration: '850ms'
       });
 
