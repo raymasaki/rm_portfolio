@@ -100,10 +100,9 @@ function MainRouter($stateProvider, $urlRouterProvider) {
             // if (hasTransition.getProperty() === true) {
                window.setTimeout(function() {
 
-
                   // sheet transitions in
                   angular.element('.project').velocity({
-                     translateY: ['10vh', '100vh']
+                     translateY: ['10vh', '110vh']
                   }, {
                      duration: 600,
                      easing: [0.37, 0.35, 0.12, 1]

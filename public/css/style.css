@@ -18,7 +18,6 @@
 /*======================== GLOBAL ========================*/
 
 html {
-   /*overflow-y: scroll;*/
    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
 .no-scroll {
@@ -26,6 +25,7 @@ html {
    overflow: hidden;
 }
 body {
+   overflow-y: scroll;
    font-family: Arial, sans-serif;
    font-size: 15px;
    line-height: 23px;
@@ -33,13 +33,8 @@ body {
    letter-spacing: .6px;
 
    color: #ECEFF1;
-   /*font-family: "Monosten E", Arial, monospace;
-   font-weight: 400;
-   font-size: 14px;
-   line-height: 24px;*/
    background: #000;
    font-kerning: normal;
-   /*max-width: 1600px;*/
    margin: 0 auto;
 }
 h1 {
@@ -104,10 +99,6 @@ em {
    animation-delay: 650ms;
    animation-fill-mode: forwards;
 }
-/*.main, p.about {
-   font-size: 14px;
-   line-height: 24px;
-}*/
 .menu {
    margin-bottom: 32px;
 }
@@ -185,10 +176,14 @@ img.loaded {
    float: right;
    margin-right: 5%;
    background: #FFF;
-   transform: translateY(110vh) rotateZ(0deg);
+   transform: translateY(110vh);
    box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 1);
    box-sizing: border-box;
    padding: 24px 32px 0px;
+
+   min-height: 101%;
+   -webkit-perspective: 1000;
+   -webkit-backface-visibility: hidden;
 }
 .close {
    font-family: Arial, sans-serif;
@@ -218,7 +213,6 @@ img.loaded {
    flex-wrap: wrap;
    width: 100%;
    justify-content: space-between;
-   min-height: 544px;
 }
 .project-images img {
    width: 100%;
@@ -237,6 +231,7 @@ img.loaded {
 }
 .row, .row-60, .row-80, .left-40, .left-50, .left-70, .left-60, .left-30, .right-40, .right-30, .right-50, .right-60 {
    position: relative;
+   min-height: 272px;
 }
 .project-images .row {
    width: 100%;
@@ -378,6 +373,9 @@ img.loaded {
       padding: 0;
       margin-bottom: 4px;
    }
+   .row, .row-60, .row-80, .left-40, .left-50, .left-70, .left-60, .left-30, .right-40, .right-30, .right-50, .right-60 {
+      min-height: 0;
+   }
    .row-60 {
       width: 100%;
       padding: 0;
@@ -427,10 +425,14 @@ img.loaded {
    .right-60 {
       width: 100%;
    }
+   .copyright {
+      position: fixed;
+      bottom: 52px;
+      right: -16px;
+   }
 }
 @media (max-height: 600px) {
    .main {
-      /*position: absolute;*/
       padding: 12px;
    }
    .main, p.about {
