@@ -18,9 +18,12 @@
 /*======================== GLOBAL ========================*/
 
 html {
-   overflow-y: scroll;
-   -webkit-text-size-adjust: 100%;
-   /* Prevent font scaling in landscape while allowing user zoom */
+   /*overflow-y: scroll;*/
+   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+.no-scroll {
+   height: 100%;
+   overflow: hidden;
 }
 body {
    font-family: Arial, sans-serif;

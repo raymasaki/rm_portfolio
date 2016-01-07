@@ -95,9 +95,11 @@ function MainRouter($stateProvider, $urlRouterProvider) {
             // finds the current project and gives it selected class
             var projectClass = '.' + $stateParams.projectId;
             angular.element(projectClass).addClass('selected');
+            angular.element('body').addClass('no-scroll');
 
-            if (hasTransition.getProperty() === true) {
+            // if (hasTransition.getProperty() === true) {
                window.setTimeout(function() {
+
 
                   // sheet transitions in
                   angular.element('.project').velocity({
@@ -108,7 +110,11 @@ function MainRouter($stateProvider, $urlRouterProvider) {
                   });
 
                }, 300);
-            }
+
+               window.setTimeout(function() {
+                  angular.element('body').removeClass('no-scroll');
+               }, 1000);
+            // }
 
             var portfolioArr = Portfolio.projectList;
             var currIndex = 0;
