@@ -1,49 +1,15 @@
-app.controller('MenuCtrl', ['$log', '$state', 'currAngle', MenuCtrl]);
+app.controller('MenuCtrl', ['$log', '$state', 'Portfolio', 'hasTransition', MenuCtrl]);
 
-function MenuCtrl($log, $state, currAngle) {
+function MenuCtrl($log, $state, Portfolio, hasTransition) {
 
    var self = this;
    self.currProject = null;
-
-   self.projects = [{
-         title: 'Google Primer',
-         id: 'primer',
-         role: 'Mobile App, Website'
-      }, {
-         title: 'Banger Gallery',
-         id: 'banger',
-         role: 'Website'
-      }, {
-         title: 'HYPEBEAST',
-         id: 'hypebeast',
-         role: 'Logo'
-      }, {
-         title: 'CS Industries',
-         id: 'csindus',
-         role: 'Brand Identity, Website'
-      }, {
-         title: 'Insa Brooklyn',
-         id: 'insa',
-         role: 'Restaurant Identity'
-      }, {
-         title: 'Quesofrito',
-         id: 'quesofrito',
-         role: 'Logo, Lettering'
-      },
-      // { title : 'MONEYSHOWER.BIZ', id : 'moneyshower', role : 'Website' },
-      {
-         title: 'Graphiti',
-         id: 'graphiti',
-         role: 'Icon Suite'
-      }
-      // { title : 'Illmat', id : 'illmat', role : 'Typeface' }
-   ];
+   self.projects = Portfolio.projectList;
 
    self.showProject = function(id) {
       self.currProject = id;
 
-      // gets the current angle of the sheet
-      var angle = currAngle.getProperty();
+      hasTransition.setProperty(true);
 
       // if a current project exists
       if (self.currProject !== null) {
@@ -51,7 +17,6 @@ function MenuCtrl($log, $state, currAngle) {
          // current sheet transitions off page with proper angle
          angular.element('.project').velocity({
             translateY: -($(document).height()),
-            rotateZ: [angle, angle]
          }, {
             duration: '850ms'
          });

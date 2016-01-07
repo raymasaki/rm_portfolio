@@ -1,6 +1,42 @@
 var app = angular.module('rmApp', ['ui.router'])
    .config(MainRouter);
 
+app.factory('Portfolio', function() {
+   return {
+      projectList : [{
+            title: 'Google Primer',
+            id: 'primer',
+            role: 'Mobile App, Website'
+         }, {
+            title: 'Banger Gallery',
+            id: 'banger',
+            role: 'Website'
+         }, {
+            title: 'HYPEBEAST',
+            id: 'hypebeast',
+            role: 'Logo'
+         }, {
+            title: 'CS Industries',
+            id: 'csindus',
+            role: 'Brand Identity, Website'
+         }, {
+            title: 'Insa Brooklyn',
+            id: 'insa',
+            role: 'Restaurant Identity'
+         }, {
+            title: 'Quesofrito',
+            id: 'quesofrito',
+            role: 'Logo, Lettering'
+         }, {
+            title: 'Graphiti',
+            id: 'graphiti',
+            role: 'Icon Suite'
+         }
+      ]
+   };
+
+});
+
 app.directive('imgFadeInOnload', function() {
    return {
       restrict: 'A',
@@ -22,19 +58,19 @@ app.directive('rmPreloader', function() {
    };
 });
 
-// Makes the current sheet angle accessible across controllers
-app.service('currAngle', function() {
-   var angle = 0;
+app.service('hasTransition', function() {
+   var transition = true;
 
    return {
       getProperty: function() {
-         return angle;
+         return transition;
       },
       setProperty: function(value) {
-         angle = value;
+         transition = value;
       }
    };
 });
+
 
 
 function MainRouter($stateProvider, $urlRouterProvider) {
@@ -47,7 +83,9 @@ function MainRouter($stateProvider, $urlRouterProvider) {
          templateUrl: function($stateParams) {
             return '/work/' + $stateParams.projectId + '.html';
          },
-         controller: function($stateParams, $state, currAngle) {
+         controller: function($stateParams, $state, Portfolio, hasTransition) {
+
+            console.log(hasTransition.getProperty());
 
             // resets the scrollTop every project
             document.body.scrollTop = 0;
@@ -58,37 +96,46 @@ function MainRouter($stateProvider, $urlRouterProvider) {
             var projectClass = '.' + $stateParams.projectId;
             angular.element(projectClass).addClass('selected');
 
-            window.setTimeout(function() {
+            if (hasTransition.getProperty() === true) {
+               window.setTimeout(function() {
 
-               // sheet angle randomizer
-               degArr = [-1.5, -1.25, -1, -0.75, 0, 0.75, 1, 1.25, 1.5];
-               var degree = degArr[Math.floor(Math.random() * degArr.length)];
+                  // sheet transitions in
+                  angular.element('.project').velocity({
+                     translateY: ['10vh', '100vh']
+                  }, {
+                     duration: 600,
+                     easing: [0.37, 0.35, 0.12, 1]
+                  });
 
-               // if user is coming from mobile, don't give sheet angle
-               if ($(document).width() < 768) {
-                  degree = 0;
+               }, 300);
+            }
+
+            var portfolioArr = Portfolio.projectList;
+            var currIndex = 0;
+
+            for (var i = 0; i < portfolioArr.length; i++) {
+               if (portfolioArr[i].id === $stateParams.projectId) {
+                  currIndex = i;
                }
-
-               degree = degree + 'deg';
-
-               currAngle.setProperty(degree);
-
-               // sheet transitions in
-               angular.element('.project').velocity({
-                  rotateZ: [degree, degree],
-                  translateY: ['10vh', '100vh']
-               }, {
-                  duration: 600,
-                  easing: [0.37, 0.35, 0.12, 1]
-               });
-
-            }, 300);
+            }
 
             // if user scrolls past the document height remove selected state
             $(window).scroll(function() {
 
+               hasTransition.setProperty(false);
+
                if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-                  $state.go('home');
+
+                  if ((currIndex + 1) === portfolioArr.length) {
+                     $state.go('workDetail', {
+                        projectId: portfolioArr[0].id
+                     });
+                  } else {
+                     $state.go('workDetail', {
+                        projectId: portfolioArr[currIndex + 1].id
+                     });
+                  }
+
                   angular.element('.selected').removeClass('selected');
                }
             });

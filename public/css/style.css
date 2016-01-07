@@ -23,14 +23,20 @@ html {
    /* Prevent font scaling in landscape while allowing user zoom */
 }
 body {
+   font-family: Arial, sans-serif;
+   font-size: 15px;
+   line-height: 23px;
+   -webkit-font-smoothing: antialiased;
+   letter-spacing: .6px;
+
    color: #ECEFF1;
-   font-family: "Monosten E", Arial, monospace;
+   /*font-family: "Monosten E", Arial, monospace;
    font-weight: 400;
    font-size: 14px;
-   line-height: 24px;
+   line-height: 24px;*/
    background: #000;
    font-kerning: normal;
-   max-width: 1600px;
+   /*max-width: 1600px;*/
    margin: 0 auto;
 }
 h1 {
@@ -44,15 +50,18 @@ h1 {
 h2 {
    font-family: 'VenusSB', Arial, sans-serif;
    font-weight: 900;
-   padding-bottom: 16px;
-   font-size: 18px;
-   line-height: 18px;
+   padding-bottom: 12px;
+   font-size: 20px;
+   line-height: 20px;
    letter-spacing: 1px;
 }
 a {
    text-decoration: none;
    color: #ECEFF1;
    cursor: pointer;
+}
+a:hover {
+   border-bottom: 1px dotted #ECEFF1;
 }
 ul {
    margin-bottom: 16px;
@@ -73,7 +82,7 @@ em {
 }
 .copyright {
    position: fixed;
-   bottom: 60px;
+   bottom: 64px;
    right: 0;
    opacity: 0;
    transform: rotate(90deg);
@@ -92,21 +101,19 @@ em {
    animation-delay: 650ms;
    animation-fill-mode: forwards;
 }
-.main, p.about {
+/*.main, p.about {
    font-size: 14px;
    line-height: 24px;
-}
+}*/
 .menu {
    margin-bottom: 32px;
 }
 p.about {
-   max-width: 464px;
+   max-width: 460px;
    margin-bottom: 32px;
    position: relative;
    text-shadow: 0px 0px 32px #151414;
    padding-left: 0;
-   font-size: 14px;
-   line-height: 24px;
    transition: all 300ms cubic-bezier(0.37, 0.35, 0.12, 1);
 }
 p.about:hover {
@@ -127,6 +134,9 @@ p.about:hover .bomb {
    opacity: 1;
    transition: all 400ms cubic-bezier(0.37, 0.35, 0.12, 1);
    transform: translateX(0px);
+}
+p.about:hover .bomb a:hover {
+   border: none;
 }
 .bomb svg {
    width: 48px;
@@ -172,21 +182,26 @@ img.loaded {
    float: right;
    margin-right: 5%;
    background: #FFF;
-   transform: translateY(100vh) rotateZ(0deg);
+   transform: translateY(110vh) rotateZ(0deg);
    box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 1);
    box-sizing: border-box;
    padding: 24px 32px 0px;
 }
 .close {
+   font-family: Arial, sans-serif;
+   font-size: 17px;
+   line-height: 23px;
+   -webkit-font-smoothing: antialiased;
+   letter-spacing: .6px;
+   text-transform: capitalize;
+
    position: absolute;
    top: 16px;
    right: 20px;
    cursor: pointer;
-   transition: 100ms all ease-out;
 }
 .close:hover {
    opacity: .3;
-   transition: 100ms all ease-out;
 }
 .spacer {
    clear: both;
@@ -317,6 +332,9 @@ img.loaded {
 .desc a {
    color: #141212;
    border-bottom: 1px dotted #141212;
+}
+.desc a:hover {
+   border-bottom: 1px dotted transparent;
 }
 .desc strong a {
    border: none;

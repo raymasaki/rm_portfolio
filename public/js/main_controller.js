@@ -1,6 +1,6 @@
-app.controller('AppCtrl', ['$log', '$state', '$http', '$filter', '$timeout', 'currAngle', AppCtrl]);
+app.controller('AppCtrl', ['$log', '$state', '$http', '$filter', '$timeout', AppCtrl]);
 
-function AppCtrl($log, $state, $http, $filter, $timeout, currAngle) {
+function AppCtrl($log, $state, $http, $filter, $timeout) {
 
    var self = this;
 
@@ -8,12 +8,9 @@ function AppCtrl($log, $state, $http, $filter, $timeout, currAngle) {
 
       self.currProject = null;
 
-      var angle = currAngle.getProperty();
-
       // current sheet transitions off page with proper angle
       angular.element('.project').velocity({
          translateY: -($(document).height()),
-         rotateZ: [angle, angle]
       }, {
          duration: '850ms'
       });
