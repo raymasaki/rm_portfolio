@@ -58,6 +58,9 @@ a {
    color: #ECEFF1;
    cursor: pointer;
 }
+.project-images a:hover {
+   border: none;
+}
 a:hover {
    border-bottom: 1px dotted #ECEFF1;
 }
