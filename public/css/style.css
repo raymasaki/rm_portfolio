@@ -144,7 +144,7 @@ img {
    z-index: 10;
 }
 img.loaded {
-   transition-delay: 1s;
+   transition-delay: 1.5s;
    opacity: 1;
 }
 .loading {
