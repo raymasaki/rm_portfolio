@@ -89,6 +89,8 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
             // resets the scrollTop every project
             document.body.scrollTop = 0;
+            // angular.element('body, html').scrollTop = 0;
+
             angular.element('body').addClass('no-scroll');
 
             angular.element('.selected').removeClass('selected');
@@ -129,28 +131,33 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                hasTransition.setProperty(false);
 
-               if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+               // auto-advance only works for Chrome and Safari
+               if (/Chrome[\/\s](\d+\.\d+)/.test(navigator.userAgent) || /Safari[\/\s](\d+\.\d+)/.test(navigator.userAgent)) {
 
-                  angular.element('.project').css('opacity', 0);
+                  if ($(window).scrollTop() + $(window).height() == $(document).height()) {
 
-                  window.setTimeout(function() {
-                     if ((currIndex + 1) === portfolioArr.length) {
-                        angular.element('body').addClass('no-scroll');
+                     angular.element('.project').css('opacity', 0);
 
-                        $state.go('workDetail', {
-                           projectId: portfolioArr[0].id
-                        });
-                     } else {
-                        angular.element('body').addClass('no-scroll');
+                     window.setTimeout(function() {
+                        if ((currIndex + 1) === portfolioArr.length) {
+                           angular.element('body').addClass('no-scroll');
 
-                        $state.go('workDetail', {
-                           projectId: portfolioArr[currIndex + 1].id
-                        });
-                     }
-                  }, 200);
+                           $state.go('workDetail', {
+                              projectId: portfolioArr[0].id
+                           });
+                        } else {
+                           angular.element('body').addClass('no-scroll');
+
+                           $state.go('workDetail', {
+                              projectId: portfolioArr[currIndex + 1].id
+                           });
+                        }
+                     }, 200);
 
 
-                  angular.element('.selected').removeClass('selected');
+                     angular.element('.selected').removeClass('selected');
+                  }
+
                }
             });
 

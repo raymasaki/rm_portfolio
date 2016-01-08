@@ -30,6 +30,7 @@ body {
    font-size: 15px;
    line-height: 23px;
    -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
    letter-spacing: .6px;
 
    color: #ECEFF1;
@@ -193,6 +194,7 @@ img.loaded {
    font-size: 17px;
    line-height: 23px;
    -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
    letter-spacing: .6px;
    text-transform: capitalize;
 
@@ -300,6 +302,7 @@ img.loaded {
    font-family: Arial, sans-serif;
    font-size: 12px;
    -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
    letter-spacing: .6px;
    padding: 4px 0;
 }
@@ -309,6 +312,7 @@ img.loaded {
    font-style: italic;
    line-height: 23px;
    -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
    letter-spacing: .6px;
    text-align: center;
    padding-bottom: 24px;
@@ -318,6 +322,7 @@ img.loaded {
    font-size: 17px;
    line-height: 23px;
    -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
    letter-spacing: .6px;
    width: 60%;
    margin-left: 40%;
