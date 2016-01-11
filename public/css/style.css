@@ -25,7 +25,8 @@ html {
    overflow: hidden;
 }
 body {
-   overflow-y: scroll;
+   height: 100%;
+   overflow: auto;
    font-family: Arial, sans-serif;
    font-size: 15px;
    line-height: 23px;
