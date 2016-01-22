@@ -39,6 +39,14 @@ body {
    font-kerning: normal;
    margin: 0 auto;
 }
+::selection {
+   color: #ECEFF1;
+   background: #141212; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+   color: #ECEFF1;
+   background: #141212; /* Gecko Browsers */
+}
 h1 {
    font-family: 'VenusSB', Arial, sans-serif;
    font-weight: 900;
