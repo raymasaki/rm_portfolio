@@ -85,7 +85,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
          },
          controller: function($stateParams, $state, Portfolio, hasTransition) {
 
-            console.log(hasTransition.getProperty());
+            // console.log(hasTransition.getProperty());
 
             // resets the scrollTop every project
             document.body.scrollTop = 0;
@@ -104,6 +104,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                   // sheet transitions in
                   angular.element('.project').velocity({
+                     opacity: 1,
                      translateY: ['10vh', '110vh']
                   }, {
                      duration: 600,
@@ -152,7 +153,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
                               projectId: portfolioArr[currIndex + 1].id
                            });
                         }
-                     }, 200);
+                     }, 100);
 
 
                      angular.element('.selected').removeClass('selected');

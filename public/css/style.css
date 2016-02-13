@@ -181,6 +181,8 @@ img.loaded {
 /*======================== CONTAINER ========================*/
 
 .project {
+   opacity: 0;
+
    color: #141212;
    z-index: 100;
    position: relative;
