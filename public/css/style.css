@@ -18,7 +18,8 @@
 /*======================== GLOBAL ========================*/
 
 html {
-   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+   -webkit-text-size-adjust: 100%;
+   /* Prevent font scaling in landscape while allowing user zoom */
 }
 .no-scroll {
    height: 100%;
@@ -33,7 +34,6 @@ body {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    letter-spacing: .6px;
-
    color: #ECEFF1;
    background: #000;
    font-kerning: normal;
@@ -41,11 +41,13 @@ body {
 }
 ::selection {
    color: #ECEFF1;
-   background: #141212; /* WebKit/Blink Browsers */
+   background: #141212;
+   /* WebKit/Blink Browsers */
 }
 ::-moz-selection {
    color: #ECEFF1;
-   background: #141212; /* Gecko Browsers */
+   background: #141212;
+   /* Gecko Browsers */
 }
 h1 {
    font-family: 'VenusSB', Arial, sans-serif;
@@ -100,6 +102,10 @@ em {
    animation: fadeIn 600ms ease-out;
    animation-delay: 650ms;
    animation-fill-mode: forwards;
+}
+.responsive-video {
+   max-width: 100%;
+   height: auto;
 }
 
 /*======================== MAIN ========================*/
@@ -182,7 +188,6 @@ img.loaded {
 
 .project {
    opacity: 0;
-
    color: #141212;
    z-index: 100;
    position: relative;
@@ -195,7 +200,6 @@ img.loaded {
    box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 1);
    box-sizing: border-box;
    padding: 24px 32px 0px;
-
    min-height: 101%;
    -webkit-perspective: 1000;
    -webkit-backface-visibility: hidden;
@@ -208,7 +212,6 @@ img.loaded {
    -moz-osx-font-smoothing: grayscale;
    letter-spacing: .6px;
    text-transform: capitalize;
-
    position: absolute;
    top: 16px;
    right: 20px;
