@@ -31,6 +31,10 @@ app.factory('Portfolio', function() {
             title: 'Graphiti',
             id: 'graphiti',
             role: 'Icon Suite'
+         }, {
+            title: 'Logos & Marks',
+            id: 'logos',
+            role: 'Logo, Icon Design, Lettering'
          }
       ]
    };
@@ -70,8 +74,6 @@ app.service('hasTransition', function() {
       }
    };
 });
-
-
 
 function MainRouter($stateProvider, $urlRouterProvider) {
    $stateProvider
