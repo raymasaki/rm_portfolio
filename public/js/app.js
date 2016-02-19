@@ -62,6 +62,13 @@ app.directive('rmPreloader', function() {
    };
 });
 
+app.directive('pagination', function() {
+   return {
+      restrict: 'E',
+      templateUrl: 'pagination.html'
+   };
+});
+
 app.service('hasTransition', function() {
    var transition = true;
 
@@ -91,7 +98,6 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
             // resets the scrollTop every project
             document.body.scrollTop = 0;
-            // angular.element('body, html').scrollTop = 0;
 
             angular.element('body').addClass('no-scroll');
 

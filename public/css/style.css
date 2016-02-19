@@ -1,13 +1,6 @@
 /*======================== FONTS ========================*/
 
 @font-face {
-   font-family: 'TimesNR-Cond';
-   src: url('../fonts/TimesNR-Cond.eot');
-   src: url('../fonts/TimesNR-Cond.eot?#iefix') format('embedded-opentype'), url('../fonts/TimesNR-Cond.woff') format('woff'), url('../fonts/TimesNR-Cond.woff2') format('woff2'), url('../fonts/TimesNR-Cond.ttf') format('truetype');
-   font-weight: normal;
-   font-style: normal;
-}
-@font-face {
    font-family: 'VenusSB';
    src: url('../fonts/VenusSB-Bold.eot');
    src: url('../fonts/VenusSB-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/VenusSB-Bold.woff') format('woff'), url('../fonts/VenusSB-Bold.woff2') format('woff2'), url('../fonts/VenusSB-Bold.ttf') format('truetype');
@@ -19,6 +12,7 @@
 
 html {
    -webkit-text-size-adjust: 100%;
+   overflow-x: hidden;
    /* Prevent font scaling in landscape while allowing user zoom */
 }
 .no-scroll {
@@ -197,12 +191,30 @@ img.loaded {
    margin-right: 5%;
    background: #FFF;
    transform: translateY(110vh);
-   box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 1);
+   box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 1);
    box-sizing: border-box;
    padding: 24px 32px 0px;
    min-height: 101%;
    -webkit-perspective: 1000;
    -webkit-backface-visibility: hidden;
+}
+ul.pagination {
+   position: fixed;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 80%;
+   margin-right: 5%;
+   text-align: center;
+   right: 0;
+}
+ul.pagination > li {
+   display: inline;
+   padding: 0 24px;
+}
+.arrow {
+   padding-left: 8px;
+   position: absolute;
+   bottom: 2px;
 }
 .close {
    font-family: Arial, sans-serif;

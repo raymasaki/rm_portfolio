@@ -10,9 +10,11 @@ function AppCtrl($log, $state, $http, $filter, $timeout) {
 
       // current sheet transitions off page with proper angle
       angular.element('.project').velocity({
-         translateY: -($(document).height()),
+         translateX: ($(document).width() + ($(document).width()/8)),
+         opacity: 1
       }, {
-         duration: '850ms'
+         duration: '800ms',
+         easing: [0.37, 0.35, 0.12, 1]
       });
 
       // state changes to home

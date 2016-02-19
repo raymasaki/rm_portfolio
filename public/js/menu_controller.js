@@ -16,9 +16,11 @@ function MenuCtrl($log, $state, Portfolio, hasTransition) {
 
          // current sheet transitions off page with proper angle
          angular.element('.project').velocity({
-            translateY: -($(document).height()),
+            translateX: ($(document).width() + ($(document).width()/8)),
+            opacity: 1
          }, {
-            duration: '850ms'
+            duration: '800ms',
+            easing: [0.37, 0.35, 0.12, 1]
          });
 
          // open the clicked project
@@ -26,7 +28,7 @@ function MenuCtrl($log, $state, Portfolio, hasTransition) {
             $state.go('workDetail', {
                projectId: id
             });
-         }, 600);
+         }, 350);
       }
    };
 
