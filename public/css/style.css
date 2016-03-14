@@ -12,12 +12,12 @@
 
 html {
    -webkit-text-size-adjust: 100%;
-   overflow-x: hidden;
+   /*overflow-x: hidden;*/
    /* Prevent font scaling in landscape while allowing user zoom */
 }
 .no-scroll {
    height: 100%;
-   overflow: hidden;
+   overflow-y: hidden;
 }
 body {
    height: 100%;

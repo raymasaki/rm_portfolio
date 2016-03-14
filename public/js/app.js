@@ -32,6 +32,10 @@ app.factory('Portfolio', function() {
             id: 'graphiti',
             role: 'Icon Suite'
          }, {
+            title: 'Elsewhere',
+            id: 'elsewhere',
+            role: 'Website'
+         }, {
             title: 'Logos & Marks',
             id: 'logos',
             role: 'Logo, Icon Design, Lettering'
@@ -123,7 +127,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
 
                window.setTimeout(function() {
                   angular.element('body').removeClass('no-scroll');
-               }, 1000);
+               }, 1200);
             // }
 
             var portfolioArr = Portfolio.projectList;
@@ -161,7 +165,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
                               projectId: portfolioArr[currIndex + 1].id
                            });
                         }
-                     }, 100);
+                     }, 200);
 
 
                      angular.element('.selected').removeClass('selected');

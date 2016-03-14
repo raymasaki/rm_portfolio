@@ -19,7 +19,7 @@ function MenuCtrl($log, $state, Portfolio, hasTransition) {
             translateX: ($(document).width() + ($(document).width()/8)),
             opacity: 1
          }, {
-            duration: '800ms',
+            duration: '750ms',
             easing: [0.37, 0.35, 0.12, 1]
          });
 
@@ -28,7 +28,7 @@ function MenuCtrl($log, $state, Portfolio, hasTransition) {
             $state.go('workDetail', {
                projectId: id
             });
-         }, 350);
+         }, 275);
       }
    };
 

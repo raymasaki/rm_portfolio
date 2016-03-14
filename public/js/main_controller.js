@@ -13,7 +13,7 @@ function AppCtrl($log, $state, $http, $filter, $timeout) {
          translateX: ($(document).width() + ($(document).width()/8)),
          opacity: 1
       }, {
-         duration: '800ms',
+         duration: '750ms',
          easing: [0.37, 0.35, 0.12, 1]
       });
 
